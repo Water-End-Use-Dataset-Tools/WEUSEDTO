@@ -1,0 +1,600 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to wateranalysis’s documentation! &#8212; watersim 0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-wateranalysis-s-documentation">
+<h1>Welcome to wateranalysis’s documentation!<a class="headerlink" href="#welcome-to-wateranalysis-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+<span class="target" id="module-examples.split"></span><span class="target" id="module-examples.model"></span><span class="target" id="module-examples.learn"></span><span class="target" id="module-examples.simulate"></span><span class="target" id="module-wateranalysis.conf.config"></span><div class="section" id="conf">
+<h2>Conf<a class="headerlink" href="#conf" title="Permalink to this headline">¶</a></h2>
+<p>This module include global configuration parameters for the software</p>
+<dl class="class">
+<dt id="wateranalysis.conf.config.Configuration">
+<em class="property">class </em><code class="descclassname">wateranalysis.conf.config.</code><code class="descname">Configuration</code><a class="headerlink" href="#wateranalysis.conf.config.Configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class define a correspondence between the name of the fixture and the filename of its time-series</p>
+</dd></dl>
+
+</div>
+<span class="target" id="module-wateranalysis.timeseries.splitters"></span><div class="section" id="splitters">
+<h2>splitters<a class="headerlink" href="#splitters" title="Permalink to this headline">¶</a></h2>
+<p>This is a  module which implement different algorithms to split a timeseries</p>
+<dl class="class">
+<dt id="wateranalysis.timeseries.splitters.SimpleSplitter">
+<em class="property">class </em><code class="descclassname">wateranalysis.timeseries.splitters.</code><code class="descname">SimpleSplitter</code><span class="sig-paren">(</span><em>time_series</em>, <em>out_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.timeseries.splitters.SimpleSplitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>SimpleSplitter class provides methods to split a time-series in multiple usages using threshold as unique criteria</p>
+<dl class="method">
+<dt id="wateranalysis.timeseries.splitters.SimpleSplitter.split">
+<code class="descname">split</code><span class="sig-paren">(</span><em>sep=' '</em>, <em>head=None</em>, <em>threshold=0</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.timeseries.splitters.SimpleSplitter.split" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method split a time-series using a threshold as only one criteria.
+Splitted timeseries must be at least five samples long.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>sep</strong> – the delimiter for the csv file, default is the space</li>
+<li><strong>head</strong> – not None if the first line of the csv contains column titles</li>
+<li><strong>threshold</strong> – a float value that is compared with the samples to identify
+first and last sample for splitting</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<span class="target" id="module-wateranalysis.timeseries.filters"></span><div class="section" id="filters">
+<h2>filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
+<p>This module filters from a set of time-series overlays, whose features do not comply with some parameters</p>
+<dl class="class">
+<dt id="wateranalysis.timeseries.filters.TSFilter">
+<em class="property">class </em><code class="descclassname">wateranalysis.timeseries.filters.</code><code class="descname">TSFilter</code><a class="headerlink" href="#wateranalysis.timeseries.filters.TSFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class provide stati methods to filter overlays in a set of time-series</p>
+<dl class="staticmethod">
+<dt id="wateranalysis.timeseries.filters.TSFilter.liters">
+<em class="property">static </em><code class="descname">liters</code><span class="sig-paren">(</span><em>ts</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.timeseries.filters.TSFilter.liters" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ts</strong> – the time series of water flow samples [ml/s]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the total amount of liters</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="wateranalysis.timeseries.filters.TSFilter.outlayers">
+<em class="property">static </em><code class="descname">outlayers</code><span class="sig-paren">(</span><em>ts_dir</em>, <em>min_dur_const=0</em>, <em>min_lit_const=0</em>, <em>min_samp_const=1</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.timeseries.filters.TSFilter.outlayers" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method scan the csv files in a directory and identifies time series whose features to dont comply
+with provided constraints
+:param ts_dir:  the folder with csv fiels
+:param min_dur_const: the minimal duration of time-sereis
+:param min_lit_const: the minimum amount of liters of time-series
+:param min_samp_const: the minimum number of samples pf a times-series
+:param sep: the character used as separator in the csv file
+:return: the method returns a dictionary that for each constraint  lists the basename of csv file which
+violate the constraints</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="wateranalysis.timeseries.filters.TSFilter.remove_outlayers">
+<em class="property">static </em><code class="descname">remove_outlayers</code><span class="sig-paren">(</span><em>ts_dir</em>, <em>outlayers</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.timeseries.filters.TSFilter.remove_outlayers" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method move the csv files listed in the outlayers dictionary to a subdire
+:param ts_dir: the folder containing the csv files
+:param outlayers: the dictionary listing the files to be moved
+:return: None</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="wateranalysis.timeseries.filters.TSFilter.rename_usages">
+<em class="property">static </em><code class="descname">rename_usages</code><span class="sig-paren">(</span><em>ts_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.timeseries.filters.TSFilter.rename_usages" title="Permalink to this definition">¶</a></dt>
+<dd><p>This  method rename the  n files in a directory in a way that their name corresponde to the first n numbers
+:param ts_dir:  the folder containing the files
+:return: None</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<span class="target" id="module-wateranalysis.timeseries.statistics"></span><div class="section" id="statistiscs">
+<h2>statistiscs<a class="headerlink" href="#statistiscs" title="Permalink to this headline">¶</a></h2>
+<p>This module computes features of a timeseries</p>
+<dl class="class">
+<dt id="wateranalysis.timeseries.statistics.TSParameters">
+<em class="property">class </em><code class="descclassname">wateranalysis.timeseries.statistics.</code><code class="descname">TSParameters</code><a class="headerlink" href="#wateranalysis.timeseries.statistics.TSParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class provide static methods to compute properties of a timeseries composed of water flow sample</p>
+<dl class="staticmethod">
+<dt id="wateranalysis.timeseries.statistics.TSParameters.compute_parameters">
+<em class="property">static </em><code class="descname">compute_parameters</code><span class="sig-paren">(</span><em>outfile</em>, <em>ts_dir</em>, <em>csv_sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.timeseries.statistics.TSParameters.compute_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method compute a list of features of time-series contained in each csv file of ts_dir folder
+Result are saved in a [fixture]_usage.csv file containing the following properties:
+(start_datetime, duration, liters, month, hour, day, max_flow)
+:param outfile: output filename
+:param ts_dir: the folder containing csv file
+:param csv_sep: the delimiter used in the csv file, space is the default value</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="wateranalysis.timeseries.statistics.TSParameters.liters">
+<em class="property">static </em><code class="descname">liters</code><span class="sig-paren">(</span><em>ts</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.timeseries.statistics.TSParameters.liters" title="Permalink to this definition">¶</a></dt>
+<dd><p>This methods compute the total amount of liters from a time series that provide flow samples
+:param ts: it is an array of samples (epoch, flow_value)
+:return: the total amount of liters as a float</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="wateranalysis.timeseries.statistics.TSParameters.rename_usages">
+<em class="property">static </em><code class="descname">rename_usages</code><span class="sig-paren">(</span><em>ts_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.timeseries.statistics.TSParameters.rename_usages" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method rename csv files in a directory in a way that filenames are a sequence of numbers [1,n]
+:param ts_dir: the directory containing csv files (1.csv, 2.csv, 4.csv …)</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="wateranalysis.timeseries.statistics.TSParameters.usages_perday">
+<em class="property">static </em><code class="descname">usages_perday</code><span class="sig-paren">(</span><em>outfile</em>, <em>filename</em>, <em>csv_sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.timeseries.statistics.TSParameters.usages_perday" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method from the file of features (that in the first column contains start date_time
+of the time-series), computes  usages per day in [fixture]_num_usage.csv.
+Each row of the output file contains  four columns: [month, day, num_usages, weekday]
+:param fixture: prefix of produced output file
+:param filename: the input file, produced by the <em>compute_features</em> method.
+:param csv_sep:
+:return: the delimiter used in the csv file, space is the default value</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<span class="target" id="module-wateranalysis.models.statistics"></span><div class="section" id="timeseries-statistics">
+<h2>timeseries.statistics<a class="headerlink" href="#timeseries-statistics" title="Permalink to this headline">¶</a></h2>
+<p>This module define  models for describing  statistically the frequency of fixture usage.</p>
+<dl class="class">
+<dt id="wateranalysis.models.statistics.GlobalUsage">
+<em class="property">class </em><code class="descclassname">wateranalysis.models.statistics.</code><code class="descname">GlobalUsage</code><span class="sig-paren">(</span><em>df</em>, <em>df1</em>, <em>df2</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.models.statistics.GlobalUsage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class define  a statistical distribution that is the same each day of the year.
+It define the probability distribution that a person open the fixture n times, the probability that that usage
+happens at a certain hour, the average duration and the average number of liters  of a usage.</p>
+<dl class="method">
+<dt id="wateranalysis.models.statistics.GlobalUsage.compute_average">
+<code class="descname">compute_average</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.models.statistics.GlobalUsage.compute_average" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the average duration and the average amount of consumed water per usage
+:return: average duration, average consumption</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wateranalysis.models.statistics.GlobalUsage.compute_frequency">
+<code class="descname">compute_frequency</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.models.statistics.GlobalUsage.compute_frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tis method compute the ratio between the number of days with n  usages and the total number of days
+:return: an array that contains this ratio for each  n value (according to the actual occurred usages)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wateranalysis.models.statistics.GlobalUsage.compute_times">
+<code class="descname">compute_times</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.models.statistics.GlobalUsage.compute_times" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method compute the ratio between the number of usages occured at a certain hour and the total
+number of occurrences.
+:return: an array with such ration for each hour of the day</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="wateranalysis.models.statistics.ModelBuilder">
+<em class="property">class </em><code class="descclassname">wateranalysis.models.statistics.</code><code class="descname">ModelBuilder</code><span class="sig-paren">(</span><em>fixture</em>, <em>type</em>, <em>path='./data'</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.models.statistics.ModelBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class i    out_data_dir = None is used to build the desired model</p>
+<dl class="method">
+<dt id="wateranalysis.models.statistics.ModelBuilder.build_model">
+<code class="descname">build_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.models.statistics.ModelBuilder.build_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiate the model according to the type and the fixture.
+:return: The instantiated Model</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="wateranalysis.models.statistics.MonthlyUsage">
+<em class="property">class </em><code class="descclassname">wateranalysis.models.statistics.</code><code class="descname">MonthlyUsage</code><span class="sig-paren">(</span><em>df</em>, <em>df1</em>, <em>df2</em>, <em>month</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.models.statistics.MonthlyUsage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class define  a statistical distribution that is the same each day of a specific month.
+It define the probability distribution that a person open the fixture n times in a day of a month,
+the probability that that usage  occurs at a certain hour,
+the average duration and the average number of liters  of a usage in a dey of specific month.</p>
+<dl class="method">
+<dt id="wateranalysis.models.statistics.MonthlyUsage.compute_average">
+<code class="descname">compute_average</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.models.statistics.MonthlyUsage.compute_average" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the average duration and the average amount of consumed water per usage in a day of a specific month
+:return: average duration, average consumption</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wateranalysis.models.statistics.MonthlyUsage.compute_frequency">
+<code class="descname">compute_frequency</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.models.statistics.MonthlyUsage.compute_frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tis method compute the ratio between the number of days with n  usages and the total number of days
+:return: an array that contains this ratio for each  n value (according to the actual occurred usages)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wateranalysis.models.statistics.MonthlyUsage.compute_times">
+<code class="descname">compute_times</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.models.statistics.MonthlyUsage.compute_times" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method compute the ratio between the number of usages occured at a certain hour and the total
+number of occurrences.
+:return: an array with such ration for each hour of the day</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="wateranalysis.models.statistics.WeeklyUsage">
+<em class="property">class </em><code class="descclassname">wateranalysis.models.statistics.</code><code class="descname">WeeklyUsage</code><span class="sig-paren">(</span><em>df</em>, <em>df1</em>, <em>df2</em>, <em>day_week</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.models.statistics.WeeklyUsage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class define  a statistical distribution of fixture usage a specific week-day.
+It define the probability distribution that a person open the fixture n times in a day of the week,
+the probability that that usage  occurs at a certain hour,
+the average duration and the average number of liters  of a usage in a dey of specific day-week.</p>
+<dl class="method">
+<dt id="wateranalysis.models.statistics.WeeklyUsage.compute_average">
+<code class="descname">compute_average</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.models.statistics.WeeklyUsage.compute_average" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the average duration and the average amount of consumed water per usage in a day of a specific month
+:return: average duration, average consumption</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wateranalysis.models.statistics.WeeklyUsage.compute_frequency">
+<code class="descname">compute_frequency</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.models.statistics.WeeklyUsage.compute_frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tis method compute the ratio between the number of days with n  usages and the total number of days
+:return: an array that contains this ratio for each  n value (according to the actual occurred usages)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wateranalysis.models.statistics.WeeklyUsage.compute_times">
+<code class="descname">compute_times</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.models.statistics.WeeklyUsage.compute_times" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method compute the ratio between the number of usages occured at a certain hour and the total
+number of occurrences.
+:return: an array with such ration for each hour of the day</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<span class="target" id="module-wateranalysis.models.statistics"></span><div class="section" id="id1">
+<h2>timeseries.statistics<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>This module define  models for describing  statistically the frequency of fixture usage.</p>
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="descclassname">wateranalysis.models.statistics.</code><code class="descname">GlobalUsage</code><span class="sig-paren">(</span><em>df</em>, <em>df1</em>, <em>df2</em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class define  a statistical distribution that is the same each day of the year.
+It define the probability distribution that a person open the fixture n times, the probability that that usage
+happens at a certain hour, the average duration and the average number of liters  of a usage.</p>
+<dl class="method">
+<dt>
+<code class="descname">compute_average</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Compute the average duration and the average amount of consumed water per usage
+:return: average duration, average consumption</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">compute_frequency</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Tis method compute the ratio between the number of days with n  usages and the total number of days
+:return: an array that contains this ratio for each  n value (according to the actual occurred usages)</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">compute_times</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>This method compute the ratio between the number of usages occured at a certain hour and the total
+number of occurrences.
+:return: an array with such ration for each hour of the day</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="descclassname">wateranalysis.models.statistics.</code><code class="descname">ModelBuilder</code><span class="sig-paren">(</span><em>fixture</em>, <em>type</em>, <em>path='./data'</em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class i    out_data_dir = None is used to build the desired model</p>
+<dl class="method">
+<dt>
+<code class="descname">build_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Instantiate the model according to the type and the fixture.
+:return: The instantiated Model</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="descclassname">wateranalysis.models.statistics.</code><code class="descname">MonthlyUsage</code><span class="sig-paren">(</span><em>df</em>, <em>df1</em>, <em>df2</em>, <em>month</em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class define  a statistical distribution that is the same each day of a specific month.
+It define the probability distribution that a person open the fixture n times in a day of a month,
+the probability that that usage  occurs at a certain hour,
+the average duration and the average number of liters  of a usage in a dey of specific month.</p>
+<dl class="method">
+<dt>
+<code class="descname">compute_average</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Compute the average duration and the average amount of consumed water per usage in a day of a specific month
+:return: average duration, average consumption</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">compute_frequency</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Tis method compute the ratio between the number of days with n  usages and the total number of days
+:return: an array that contains this ratio for each  n value (according to the actual occurred usages)</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">compute_times</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>This method compute the ratio between the number of usages occured at a certain hour and the total
+number of occurrences.
+:return: an array with such ration for each hour of the day</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="descclassname">wateranalysis.models.statistics.</code><code class="descname">WeeklyUsage</code><span class="sig-paren">(</span><em>df</em>, <em>df1</em>, <em>df2</em>, <em>day_week</em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class define  a statistical distribution of fixture usage a specific week-day.
+It define the probability distribution that a person open the fixture n times in a day of the week,
+the probability that that usage  occurs at a certain hour,
+the average duration and the average number of liters  of a usage in a dey of specific day-week.</p>
+<dl class="method">
+<dt>
+<code class="descname">compute_average</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Compute the average duration and the average amount of consumed water per usage in a day of a specific month
+:return: average duration, average consumption</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">compute_frequency</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Tis method compute the ratio between the number of days with n  usages and the total number of days
+:return: an array that contains this ratio for each  n value (according to the actual occurred usages)</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">compute_times</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>This method compute the ratio between the number of usages occured at a certain hour and the total
+number of occurrences.
+:return: an array with such ration for each hour of the day</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<span class="target" id="module-wateranalysis.models.spline"></span><span class="target" id="module-wateranalysis.learning.cluster"></span><div class="section" id="learning-cluster">
+<h2>learning.cluster<a class="headerlink" href="#learning-cluster" title="Permalink to this headline">¶</a></h2>
+<p>This module compute the k-means clustering of time-series reperesented as an array of features</p>
+<dl class="class">
+<dt id="wateranalysis.learning.cluster.TSCluster">
+<em class="property">class </em><code class="descclassname">wateranalysis.learning.cluster.</code><code class="descname">TSCluster</code><span class="sig-paren">(</span><em>folder</em>, <em>filename</em>, <em>runs</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.learning.cluster.TSCluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class implements the k-means clustering of a set of time-series represented as an array of featuers</p>
+<dl class="method">
+<dt id="wateranalysis.learning.cluster.TSCluster.compute_clusters">
+<code class="descname">compute_clusters</code><span class="sig-paren">(</span><em>testset</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.learning.cluster.TSCluster.compute_clusters" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method compute the clustering of the time-series. It creates one sub-folder per cluster and
+copies the corresponding time-series there.
+:param testset: the vectors of featuers
+:return: the number of clusters, the array of cluster id.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wateranalysis.learning.cluster.TSCluster.extract_features">
+<code class="descname">extract_features</code><span class="sig-paren">(</span><em>parameters=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.learning.cluster.TSCluster.extract_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>This methods projects the vectors of features contained in the [fixture]_usage.csv file of features,
+saving the result into the [fixture].individuals file
+:param parameters: the list of parameter names
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wateranalysis.learning.cluster.TSCluster.find_k1">
+<code class="descname">find_k1</code><span class="sig-paren">(</span><em>testset</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.learning.cluster.TSCluster.find_k1" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method compute the best number of clusters from the testest list of vectors
+:param testset: the vectors of features
+:return: the number of clusters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wateranalysis.learning.cluster.TSCluster.get_testset">
+<code class="descname">get_testset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.learning.cluster.TSCluster.get_testset" title="Permalink to this definition">¶</a></dt>
+<dd><p>This returns the vectors of features normalizing each parameter
+:return: the normalized vectors of features.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wateranalysis.learning.cluster.TSCluster.meanshift">
+<code class="descname">meanshift</code><span class="sig-paren">(</span><em>testset</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.learning.cluster.TSCluster.meanshift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute clustering with MeanShift
+:param testset:
+:return:</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="wateranalysis.learning.cluster.TSCluster.plot_clusters">
+<em class="property">static </em><code class="descname">plot_clusters</code><span class="sig-paren">(</span><em>testset, clusters, axis=[0, 1]</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.learning.cluster.TSCluster.plot_clusters" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method plots the clusters along two dimension
+:param testset: the vectors of features
+:param clusters: the cluster id of the corresponding vector
+:param axis: the features to be used a plot dimensions
+:return: plt</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<span class="target" id="module-wateranalysis.learning.randomforest"></span><div class="section" id="learning-randomforest">
+<h2>learning.randomforest<a class="headerlink" href="#learning-randomforest" title="Permalink to this headline">¶</a></h2>
+<p>This module use machine learning technique to learn to which cluster will belong the time-series
+if it runs in a defined day at a defined hour.</p>
+<dl class="class">
+<dt id="wateranalysis.learning.randomforest.RandomForest">
+<em class="property">class </em><code class="descclassname">wateranalysis.learning.randomforest.</code><code class="descname">RandomForest</code><span class="sig-paren">(</span><em>folder</em>, <em>fixture</em>, <em>n_clusters</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.learning.randomforest.RandomForest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class provide methods for learning, evaluating and predicting the cluster id of a time-series
+according the date-time it is running</p>
+<dl class="method">
+<dt id="wateranalysis.learning.randomforest.RandomForest.compute_features">
+<code class="descname">compute_features</code><span class="sig-paren">(</span><em>clusters</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.learning.randomforest.RandomForest.compute_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>This methods read the vector of features (datetime, duration, liters, maxflow) from the relateed file.
+It uses the date-time on which the time-series started to compute the hour of the day, the day of the month,
+the day of the week</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>clusters</strong> – the list of cluster ids identified for the time-series to be analyzed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="wateranalysis.learning.randomforest.RandomForest.evaluate">
+<code class="descname">evaluate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.learning.randomforest.RandomForest.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method use The RandomForest algorithm to evaluate how works the learning and prediction of cluster id.
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="wateranalysis.learning.randomforest.RandomForest.learn">
+<code class="descname">learn</code><span class="sig-paren">(</span><em>data_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.learning.randomforest.RandomForest.learn" title="Permalink to this definition">¶</a></dt>
+<dd><p>This methods learns how the cluster id depends on the following parameters of the time-series:
+hour, day_week, day_month
+:param data_dir: the folder where the learned model must be serialized
+:return: None</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="wateranalysis.learning.randomforest.RandomForest.predict">
+<em class="property">static </em><code class="descname">predict</code><span class="sig-paren">(</span><em>model_file</em>, <em>file_items</em><span class="sig-paren">)</span><a class="headerlink" href="#wateranalysis.learning.randomforest.RandomForest.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>This methods loads the model_file
+:param model_file: the filename where the previous learning phase saved the odel.
+:param file_items: the vectors of features of the time-series whose cluster must be predicted.
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<span class="target" id="module-wateranalysis.simulation.generator"></span><span class="target" id="module-wateranalysis.vis.ts_draw"></span><span class="target" id="module-wateranalysis.vis.clusterview"></span><span class="target" id="module-wateranalysis.vis.view_spline"></span></div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to wateranalysis’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a><ul>
+<li><a class="reference internal" href="#conf">Conf</a></li>
+<li><a class="reference internal" href="#splitters">splitters</a></li>
+<li><a class="reference internal" href="#filters">filters</a></li>
+<li><a class="reference internal" href="#statistiscs">statistiscs</a></li>
+<li><a class="reference internal" href="#timeseries-statistics">timeseries.statistics</a></li>
+<li><a class="reference internal" href="#id1">timeseries.statistics</a></li>
+<li><a class="reference internal" href="#learning-cluster">learning.cluster</a></li>
+<li><a class="reference internal" href="#learning-randomforest">learning.randomforest</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Salvatore Venticinque, Anna Di Mauro, Giovanni Santanastaso.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
