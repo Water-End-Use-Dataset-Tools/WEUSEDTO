@@ -2,7 +2,7 @@
 
 
 
-##Examples
+## Examples
 
 ### split timeseries
 
@@ -44,6 +44,6 @@ usage: simulate.py [-h] [--smodel {global,monthly,weekly}] [--month {1,2,3,4,5,6
 simulate.py: error: the following arguments are required: FIXTURE
 ```
 
-##Documentation
+## Documentation
 
-* [API](https://github.io/25sal/waterseries/docs/html/)
+* [API](https://25sal.github.io//waterseries/docs/html/)
