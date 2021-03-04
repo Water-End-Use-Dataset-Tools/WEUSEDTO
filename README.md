@@ -13,6 +13,9 @@ Data gathered have 1s resolution for disaggregate time series and 10s for the ag
 .
 <a name="analysis"></a>
 ## Data Analysis
+Examples of analysis of water flow timeseries are shown in two notebook:
+* [Shower Analysis](https://github.com/25sal/waterseries/blob/main/src/notebooks/shower.ipynb)
+* [Washbasin Analysis](https://github.com/25sal/waterseries/blob/main/src/notebooks/washbasin.ipynb)
 
 <a name="API"></a>
 ## API Documentation
