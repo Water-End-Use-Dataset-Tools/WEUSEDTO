@@ -8,24 +8,21 @@ Water E-data Tools (WET) is an open water end use consumption dataset and data a
 
 <a name="dataset"></a>
 ## The dataset
-The software repository contains 9 time-series of raw measures exported as csv files. They correspond to the fixtures monitored in the apartment used as case study and, to the whole-house aggregate consumption. 
-Data gathered have 1s resolution for disaggregate time series and 10s for the aggregate measurements, spanning 1 year from March 2019-October 2020. WCD at fixture level are collected using an Internet of things (IoT) water end use monitoring system, as reported  in [[1]](#bib1)  and  [[2]](#bib2). WCD at household level are gathered using an ultrasonic water meter based on LoRa wireless transmission technology
-
 The software repository contains raw water end-use consumption time series collected in a single apartment used as case study. 
 Water end-uses are monitored using different IoT systems set up for all the fixtures in the apartment, as reported in [[1]](#bib1)  and  [[2]](#bib2). Water consumption data at household level are gathered using an ultrasonic water meter based on LoRa wireless transmission technology.
 
 The dataset refers to 1 year of monitoring between 2019 and 2020 (March to November 2019 and July to October 2020). The residential apartment monitored, sited in Naples (Italy), is made up of 7 water fixtures and is inhabited by 1 person. Data are gathered with 1s resolution at fixture level and 10s resolution at household level. Data at fixture level are collected for the entire period of monitoring while aggregate water consumption data are available for two months (September-October 2020).
 The dataset contains:
-•	Water end use time series disaggregate for each fixture:
-o	Washbasin
-o	Bidet
-o	Kitchen faucet
-o	Shower
-o	Washinmachine
-o	Dishwasher
-o	Toilet
-•	Water end use time series aggregate for the whole apartment:
-o	Whole house consumption
+* Water end use time series disaggregate for each fixture:
+   * Washbasin
+   * Bidet
+   * Kitchen faucet
+   * Shower
+   * Washinmachine
+   * Dishwasher
+   * Toilet
+* Water end use time series aggregate for the whole apartment:
+   * Whole house consumption
 
 .
 <a name="analysis"></a>
