@@ -105,6 +105,6 @@ simulate.py: error: the following arguments are required: FIXTURE
 ### Licences
 This work is dual-licensed:
 
-*SOFTWARE*: Released under the GNU General Public License v3.0. 
+*SOFTWARE*: Released under the [GNU General Public License v3.0.](https://github.com/25sal/waterseries/blob/main/LICENSE.txt) See the GNU General Public License for more details: http://www.gnu.org/licenses/licenses.en.html.
 
-*DATASET*: Released under the Creative Commons Attribution 4.0 International.
+*DATASET*: Released under the [Creative Commons Attribution 4.0 International.](https://github.com/25sal/waterseries/blob/main/data/LICENSE.txt) See theCreative Commons Attribution 4.0 International License for more details:    :https://creativecommons.org/licenses/by/4.0/legalcode
