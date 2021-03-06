@@ -98,6 +98,6 @@ simulate.py: error: the following arguments are required: FIXTURE
 ```
 
 
-<a name="bib1">[1]</a>   A. Di Mauro, A. Di Nardo, G. F. Santonastaso, S. Venticinque, An IoT system for monitoring and data collection of residential water end-use consumption, in:  Proceedings - International Conference on Computer Communications  and  Networks,  ICCCN,  Vol.  2019-July,  IEEE,  2019,pp. 1–6.
+<a name="bib1">[1]</a>   A. Di Mauro, A. Di Nardo, G. F. Santonastaso, S. Venticinque, An IoT system for monitoring and data collection of residential water end-use consumption, in:  Proceedings - International Conference on Computer Communications  and  Networks,  ICCCN,  Vol.  2019-July,  IEEE,  2019,pp. 1–6. [*Di Mauro, A., Di Nardo, A., Santonastaso, G. F., & Venticinque, S. (2019). An IoT system for monitoring and data collection of residential water end-use consumption. In Proc. - Int. Conf. Comput. Commun. Networks, ICCCN. Vol. 2019-July*](https://www.researchgate.net/publication/334957395_An_IoT_System_for_Monitoring_and_Data_Collection_of_Residential_Water_End-Use_Consumption) 
 
 <a name="bib2">[2]</a> A. Di Mauro, A. Di Nardo, G. F. Santonastaso, S. Venticinque, Development of an IoT System for the Generation of a Database of Residential Water End-Use Consumption Time Series, Environmental Sciences Proceedings 2 (1) (2020)
