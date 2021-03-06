@@ -25,7 +25,7 @@ The dataset contains:
 * Water end use time series aggregate for the whole apartment:
    * Whole house consumption
    
-Since data collection is still on going, the DATASET is also available at this public repository: https://github.com/AnnaDiMauro/WATER-E-DATA where data stored will be improved as more data become available.
+Since data collection is still on going, the DATASET is also available at this public repository: https://github.com/AnnaDiMauro/WATER-E-DATA where data stored will be periodically improved as more data become available.
 
 <a name="analysis"></a>
 ## Data Analysis
