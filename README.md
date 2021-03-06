@@ -97,7 +97,11 @@ usage: simulate.py [-h] [--smodel {global,monthly,weekly}] [--month {1,2,3,4,5,6
 simulate.py: error: the following arguments are required: FIXTURE
 ```
 
-
+### References
 <a name="bib1">[1]</a>  [*Di Mauro, A., Di Nardo, A., Santonastaso, G. F., & Venticinque, S. (2019). An IoT system for monitoring and data collection of residential water end-use consumption. In Proc. - Int. Conf. Comput. Commun. Networks, ICCCN. Vol. 2019-July*](https://www.researchgate.net/publication/334957395_An_IoT_System_for_Monitoring_and_Data_Collection_of_Residential_Water_End-Use_Consumption) 
 
 <a name="bib2">[2]</a> [*Di Mauro, A., Di Nardo, A., Santonastaso, G. F., & Venticinque, S. (2020). Development of an IoT System for the Generation of a Database of Residential Water End-Use Consumption Time Series. Environ. Sci. Proc. 2, 20.*](https://www.researchgate.net/publication/343637309_Development_of_an_IoT_System_for_the_Generation_of_a_Database_of_Residential_Water_End-Use_Consumption_Time_Series)
+
+### Licences
+*The software*: Copyright (C) 2021 A. Di Mauro, S. Venticinque, G.F. Santonastaso and A. Di Nardo. Released under the GNU General Public License v3.0. 
+*The dataset*: Released under the Creative Commons Attribution 4.0 International.
