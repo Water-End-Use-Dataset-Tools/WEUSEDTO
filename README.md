@@ -20,7 +20,7 @@ The dataset contains:
    * Kitchen faucet
    * Shower
    * Washinmachine
-   * Dishwasher
+   * Dishwasher (2 time series: cycle 30min and cycle 50eco)
    * Toilet
 * Water end use time series aggregate for the whole apartment:
    * Whole house consumption
