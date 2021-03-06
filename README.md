@@ -103,5 +103,6 @@ simulate.py: error: the following arguments are required: FIXTURE
 <a name="bib2">[2]</a> [*Di Mauro, A., Di Nardo, A., Santonastaso, G. F., & Venticinque, S. (2020). Development of an IoT System for the Generation of a Database of Residential Water End-Use Consumption Time Series. Environ. Sci. Proc. 2, 20.*](https://www.researchgate.net/publication/343637309_Development_of_an_IoT_System_for_the_Generation_of_a_Database_of_Residential_Water_End-Use_Consumption_Time_Series)
 
 ### Licences
-*The software*: Copyright (C) 2021 A. Di Mauro, S. Venticinque, G.F. Santonastaso and A. Di Nardo. Released under the GNU General Public License v3.0. 
-*The dataset*: Released under the Creative Commons Attribution 4.0 International.
+*SOFTWARE*: Copyright (C) 2021 A. Di Mauro, S. Venticinque, G.F. Santonastaso and A. Di Nardo. Released under the GNU General Public License v3.0. 
+
+*DATASET*: Released under the Creative Commons Attribution 4.0 International.
