@@ -12,6 +12,7 @@ The software repository contains raw water end-use consumption time series colle
 Water end-uses are monitored using different IoT systems set up for all the fixtures in the apartment, as reported in [[1]](#bib1)  and  [[2]](#bib2). Water consumption data at household level are gathered using an ultrasonic water meter based on LoRa wireless transmission technology.
 
 The dataset refers to 1 year of monitoring between 2019 and 2020 (March to November 2019 and July to October 2020). The residential apartment monitored, sited in Naples (Italy), is made up of 7 water fixtures and is inhabited by 1 person. Data are gathered with 1s resolution at fixture level and 10s resolution at household level. Data at fixture level are collected for the entire period of monitoring while aggregate water consumption data are available for two months (September-October 2020).
+
 The dataset contains:
 * Water end use time series disaggregate for each fixture:
    * Washbasin
