@@ -41,7 +41,7 @@ The API allow for processing raw flow data and are organized according to four p
 * *learning*: cluster and predict water consumption profile of usages.
 * *simulation*: according to statistical properties and machine learning techniques simulates usages at larger scale.
 
-API documentation can be found [here](https://25sal.github.io//waterseries/docs/html/).
+API documentation can be found [here](https://water-end-use-dataset-tools.github.io/WEUSEDTO/docs/html).
 
 <a name="examples"></a>
 ## Usage examples
