@@ -55,7 +55,7 @@ class ProfileGenerator:
 
         df = pd.DataFrame(list(zip(id_utente, id_utilizzo, ora_utilizzo, min_utilizzo)),
                           columns=['id_utente', 'id_utilizzo', 'ora_utilizzo', 'minuti'])
-        df.to_csv(self.out_path + '/utilizzi_global_' + fixture + '.csv', index=False, header=1, sep=' ')
+        df.to_csv(self.out_path + '/simulatedusages_' + fixture + '.csv', index=False, header=1, sep=' ')
 
     def monthly_model(self, fixture, month, n_users):
 
@@ -110,7 +110,7 @@ class ProfileGenerator:
 
         df = pd.DataFrame(list(zip(id_utente, id_utilizzo, mese_utilizzo, ora_utilizzo, min_utilizzo)),
                           columns=['id_utente', 'id_utilizzo', 'mese_utilizzo', 'ora_utilizzo', 'minuti'])
-        df.to_csv(self.out_path + '/utilizzi_monthly_' + str(month) + "_" + fixture + '.csv', index=False, header=1, sep=' ')
+        df.to_csv(self.out_path + '/simulatedusages_'  + fixture + '.csv', index=False, header=1, sep=' ')
 
     def weekly_model(self, fixture, weekday, n_users):
 
@@ -159,7 +159,7 @@ class ProfileGenerator:
                     break
         df = pd.DataFrame(list(zip(id_utente, id_utilizzo, giorno_utilizzo, ora_utilizzo)),
                           columns=['id_utente', 'id_utilizzo', 'giorno_utilizzo', 'ora di utilizzo'])
-        df.to_csv(self.out_path + '/utilizzi_weekly_' + str(giorno) + "_" + fixture + '.csv', index=False, header=1, sep=' ')
+        df.to_csv(self.out_path + '/simulatedusages_' + fixture + '.csv', index=False, header=1, sep=' ')
 
 
 if __name__ == "__main__":
