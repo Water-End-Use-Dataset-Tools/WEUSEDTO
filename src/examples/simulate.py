@@ -75,7 +75,7 @@ if __name__ == "__main__":
     if args.smodel == "global":
         # GLOBAL
         mg.global_model(fixture, args.users)
-    elif args.model == "monthly":
+    elif args.smodel == "monthly":
         mg.monthly_model(fixture, args.month, args.users)
     else:
         mg.weekly_model(fixture,args.weekday, args.users)
