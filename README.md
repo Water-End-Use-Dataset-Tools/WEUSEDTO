@@ -1,5 +1,5 @@
-# Water E-data Tools
-Water E-data Tools (WET) is an open water end use consumption dataset and data analytics tools, it has been released to help researcher, water utilities and companies to test models and algorithms on real water consumption data. The dataset combines with some notebook python able to analyze high-resolution water data in order to provide several tools to manage raw data, compute statistical analysis, learn fixture usage and generate synthetic simulation models.  
+# WEUSEDTO
+Water End USE Dataset and TOols (WEUSEDTO) is an open water end use consumption dataset and data analytics tools, it has been released to help researcher, water utilities and companies to test models and algorithms on real water consumption data. The dataset combines with some notebook python able to analyze high-resolution water data in order to provide several tools to manage raw data, compute statistical analysis, learn fixture usage and generate synthetic simulation models.  
 
 * [The dataset](#dataset)
 * [Data analysis](#analysis)
