@@ -46,11 +46,13 @@ API documentation can be found [here](https://water-end-use-dataset-tools.github
 
 <a name="requirements"></a>
 ## Requirements
-Pithon 3.8 has been used as testing evironment.
+Python 3.8 has been used as testing evironment.
 To install requirements you can run:
 ```bash
 $pip install -r requirements.txt
 ```
+Alternatively you can directly run the software at codeocean here: [WEUSEDTO CODE OCEAN CAPSULE](https://codeocean.com/capsule/9225099).
+
 <a name="examples"></a>
 ## Usage examples
 
