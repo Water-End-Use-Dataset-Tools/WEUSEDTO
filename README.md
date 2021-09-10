@@ -4,6 +4,7 @@ Water End USE Dataset and TOols (WEUSEDTO) is an open water end use consumption 
 * [The dataset](#dataset)
 * [Data analysis](#analysis)
 * [The API documentation](#api)
+* [Requirements](#requirements)
 * [Usage examples](#examples)
 
 <a name="dataset"></a>
@@ -43,6 +44,13 @@ The API allow for processing raw flow data and are organized according to four p
 
 API documentation can be found [here](https://water-end-use-dataset-tools.github.io/WEUSEDTO/docs/html).
 
+<a name="requirements"></a>
+## Requirements
+Pithon 3.8 has been used as testing evironment.
+To install requirements you can run:
+```bash
+$pip install -r requirements.txt
+```
 <a name="examples"></a>
 ## Usage examples
 
